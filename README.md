@@ -20,14 +20,16 @@ interacting with HTTP servers.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/httpie-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/httpie-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/httpie-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/httpie-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/httpie-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/httpie-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/httpie-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/httpie-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/httpie-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/httpie-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/httpie-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/httpie-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/httpie/badges/version.svg)](https://anaconda.org/conda-forge/httpie)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/httpie/badges/downloads.svg)](https://anaconda.org/conda-forge/httpie)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-httpie-green.svg)](https://anaconda.org/conda-forge/httpie) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/httpie.svg)](https://anaconda.org/conda-forge/httpie) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/httpie.svg)](https://anaconda.org/conda-forge/httpie) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/httpie.svg)](https://anaconda.org/conda-forge/httpie) |
 
 Installing httpie
 =================

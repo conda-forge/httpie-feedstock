@@ -12,13 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - http = httpie.__main__:main
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
