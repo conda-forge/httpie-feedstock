@@ -1,6 +1,6 @@
 {% set name = "httpie" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "6d1b6e21da7d3ec030ae95536d4032c1129bdaf9de4adc72c596b87e5f646e80" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "8c04f9756f1a7eac71a6dfa0834d0f6813dc8a982d8564f3a7418dcd19107c09" %}
 
 package:
   name: {{ name|lower }}
