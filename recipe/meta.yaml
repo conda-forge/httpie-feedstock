@@ -1,6 +1,6 @@
 {% set name = "httpie" %}
-{% set version = "1.0.3" %}
-{% set sha256 = "6d1b6e21da7d3ec030ae95536d4032c1129bdaf9de4adc72c596b87e5f646e80" %}
+{% set version = "2.0.0" %}
+{% set sha256 = "8c04f9756f1a7eac71a6dfa0834d0f6813dc8a982d8564f3a7418dcd19107c09" %}
 
 package:
   name: {{ name|lower }}
@@ -14,6 +14,7 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  skip: true  # [py<30]
   entry_points:
     - http = httpie.__main__:main
 
@@ -24,8 +25,8 @@ requirements:
   run:
     - python
     - colorama >=0.2.4  # [win]
-    - pygments >=2.3.1
-    - requests >=2.21.0
+    - pygments >=2.5.2
+    - requests >=2.22.0
 
 test:
   imports:
