@@ -24,8 +24,8 @@ requirements:
   run:
     - python
     - colorama >=0.2.4  # [win]
-    - pygments >=2.3.1
-    - requests >=2.21.0
+    - pygments >=2.5.2
+    - requests >=2.22.0
 
 test:
   imports:
