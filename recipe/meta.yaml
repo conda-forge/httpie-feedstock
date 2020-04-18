@@ -1,6 +1,6 @@
 {% set name = "httpie" %}
-{% set version = "2.0.0" %}
-{% set sha256 = "8c04f9756f1a7eac71a6dfa0834d0f6813dc8a982d8564f3a7418dcd19107c09" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "a76f1c72e83bd03cde3478c5f345d5570fdb2967ed19d68d09518088640b9e8e" %}
 
 package:
   name: {{ name|lower }}
@@ -12,8 +12,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py<30]
   entry_points:
     - http = httpie.__main__:main
@@ -39,7 +39,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'a CLI, cURL-like tool for humans'
+  summary: a CLI, cURL-like tool for humans
   description: |
     HTTPie (pronounced aitch-tee-tee-pie) is a command line HTTP client. Its
     goal is to make CLI interaction with web services as human-friendly as
