@@ -14,9 +14,10 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<30]
+  skip: true  # [py < 36]
   entry_points:
     - http = httpie.__main__:main
+    - https = httpie.__main__:main
 
 requirements:
   host:
@@ -33,6 +34,7 @@ test:
     - httpie
   commands:
     - http --help
+    - https --help
 
 about:
   home: https://httpie.org/
