@@ -1,6 +1,6 @@
 {% set name = "httpie" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "a76f1c72e83bd03cde3478c5f345d5570fdb2967ed19d68d09518088640b9e8e" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "ef929317b239bbf0a5bb7159b4c5d2edbfc55f8a0bcf9cd24ce597daec2afca5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py < 36]
   entry_points:
