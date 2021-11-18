@@ -1,6 +1,6 @@
 {% set name = "httpie" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "a76f1c72e83bd03cde3478c5f345d5570fdb2967ed19d68d09518088640b9e8e" %}
+{% set version = "2.6.0" %}
+{% set sha256 = "ef929317b239bbf0a5bb7159b4c5d2edbfc55f8a0bcf9cd24ce597daec2afca5" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   skip: true  # [py < 36]
   entry_points:
@@ -25,9 +25,13 @@ requirements:
     - pip
   run:
     - python
+    - charset-normalizer >=2.0.0
     - colorama >=0.2.4  # [win]
+    - defusedxml>=0.6.0
+    - multidict >=4.7.0
     - pygments >=2.5.2
     - requests >=2.22.0
+    - requests-toolbelt >=0.9.1
 
 test:
   imports:
