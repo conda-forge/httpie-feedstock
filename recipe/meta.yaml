@@ -25,9 +25,11 @@ requirements:
   run:
     - python
     - colorama >=0.2.4  # [win]
+    - importlib-metadata  # [py==37]
     - multidict >=4.7.0
     - pygments >=2.5.2
     - requests >=2.22.0
+    - rich >=9.10.0
 
 test:
   imports:
