@@ -12,9 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
+  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py < 36]
   entry_points:
     - http = httpie.__main__:main
     - https = httpie.__main__:main
