@@ -1,19 +1,17 @@
 {% set name = "httpie" %}
 {% set version = "3.1.0" %}
-{% set sha256 = "2e4a2040b84a912e65c01fb34f7aafe88cad2a3af2da8c685ca65080f376feda" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 2e4a2040b84a912e65c01fb34f7aafe88cad2a3af2da8c685ca65080f376feda
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - http = httpie.__main__:main
     - https = httpie.__main__:main
@@ -24,12 +22,18 @@ requirements:
     - pip
   run:
     - python
-    - colorama >=0.2.4  # [win]
-    - importlib-metadata  # [py==37]
+    - charset-normalizer >=2.0.0
+    - colorama >=0.2.4  #[win]
+    - defusedxml >=0.6.0
+    - importlib-metadata >=1.4.0  #[py<38]
     - multidict >=4.7.0
+    - pip
     - pygments >=2.5.2
     - requests >=2.22.0
+    - requests-toolbelt >=0.9.1
     - rich >=9.10.0
+    - setuptools
+
 
 test:
   imports:
@@ -57,3 +61,5 @@ about:
 extra:
   recipe-maintainers:
     - djsutherland
+    - ocefpaf
+
