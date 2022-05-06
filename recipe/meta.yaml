@@ -11,10 +11,12 @@ source:
 
 build:
   number: 0
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - http = httpie.__main__:main
     - https = httpie.__main__:main
+    - httpie = httpie.manager.__main__:main
 
 requirements:
   host:
@@ -23,9 +25,9 @@ requirements:
   run:
     - python
     - charset-normalizer >=2.0.0
-    - colorama >=0.2.4  #[win]
+    - colorama >=0.2.4  # [win]
     - defusedxml >=0.6.0
-    - importlib-metadata >=1.4.0  #[py<38]
+    - importlib-metadata >=1.4.0  # [py<38]
     - multidict >=4.7.0
     - pip
     - pygments >=2.5.2
@@ -39,8 +41,12 @@ test:
   imports:
     - httpie
   commands:
+    - pip check
     - http --help
     - https --help
+    - httpie --help
+  requires:
+    - pip
 
 about:
   home: https://httpie.org/
