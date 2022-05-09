@@ -1,5 +1,5 @@
 {% set name = "httpie" %}
-{% set version = "3.1.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e4a2040b84a912e65c01fb34f7aafe88cad2a3af2da8c685ca65080f376feda
+  sha256: c9c0032ca3a8d62492b7231b2dd83d94becf3b71baf8a4bbcd9ed1038537e3ec
 
 build:
   number: 0

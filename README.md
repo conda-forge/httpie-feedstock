@@ -252,4 +252,6 @@ Feedstock Maintainers
 =====================
 
 * [@djsutherland](https://github.com/djsutherland/)
+* [@honnorat](https://github.com/honnorat/)
+* [@ocefpaf](https://github.com/ocefpaf/)
 
