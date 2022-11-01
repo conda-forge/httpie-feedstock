@@ -1,0 +1,3 @@
+target_os:
+  - unix  # [unix]
+  - win  # [win]
