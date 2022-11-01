@@ -20,11 +20,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
     - __{{ target_os }}
-    - python
+    - python >=3.8
     - charset-normalizer >=2.0.0
     - colorama >=0.2.4  # [win]
     - defusedxml >=0.6.0
