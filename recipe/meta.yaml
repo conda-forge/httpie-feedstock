@@ -1,5 +1,5 @@
 {% set name = "httpie" %}
-{% set version = "3.2.3" %}
+{% set version = "3.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbb72b4c2ec738301dcb61018f93325e55bc2720977df9a6742745fa3db313c3
+  sha256: 302ad436c3dc14fd0d1b19d4572ef8d62b146bcd94b505f3c2521f701e2e7a2a
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - multidict >=4.7.0
     - pip
     - pygments >=2.5.2
-    - requests >=2.22.0,<=2.31.0
+    - requests >=2.22.0
     - requests-toolbelt >=0.9.1
     - rich >=9.10.0
     - setuptools
