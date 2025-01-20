@@ -10,7 +10,7 @@ source:
   sha256: 302ad436c3dc14fd0d1b19d4572ef8d62b146bcd94b505f3c2521f701e2e7a2a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
   entry_points:
@@ -20,12 +20,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools
     - pip
   run:
     - __{{ target_os }}
-    - python >=3.8
+    - python >={{ python_min }}
     - charset-normalizer >=2.0.0
     - colorama >=0.2.4  # [win]
     - defusedxml >=0.6.0
@@ -48,6 +48,7 @@ test:
     - httpie --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://httpie.org/
